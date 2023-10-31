@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 Bai tap trang 11
 */
@@ -25,3 +26,22 @@ int main(){
 		}  
 	return 0; 
 } 
+=======
+/*
+Bai tap trang 11
+*/
+
+/* 
+Bai 1:
+Giai va bien luan phuong trinh ax+b=0
+*/
+
+#include <stdio.h> 
+
+int main(){
+	float a,b;
+	printf("gia tri cua a va b lan luot la : ");
+	
+	return 0; 
+} 
+>>>>>>> da46bf1528a2867e4343a347f4621648c2c8d25f
