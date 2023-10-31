@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
 Bai tap trang 11
 */
@@ -8,6 +7,7 @@ Bai 1:
 Giai va bien luan phuong trinh ax+b=0
 */
 
+/*
 #include <stdio.h> 
 
 int main(){
@@ -26,22 +26,24 @@ int main(){
 		}  
 	return 0; 
 } 
-=======
+*/
+
 /*
-Bai tap trang 11
+Bai 2 
+Tinh tong s=1+2+3+...+n(n>0)
 */
 
-/* 
-Bai 1:
-Giai va bien luan phuong trinh ax+b=0
-*/
-
-#include <stdio.h> 
+#include <stdio.h>
 
 int main(){
-	float a,b;
-	printf("gia tri cua a va b lan luot la : ");
+	int n;
+	printf("gia tri nguyen duong cua n la :");
+	scanf("%d", &n); 
 	
+	int i ;
+	for(i=0; i<=n; i++){
+		i+=i; 
+	} 
+	printf("tong cac so nguyen tu 1 den %d la : %d", n, i);
 	return 0; 
 } 
->>>>>>> da46bf1528a2867e4343a347f4621648c2c8d25f
