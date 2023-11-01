@@ -56,17 +56,5 @@ tinh tong s=1/2+2/3+3/4+..+(2n+1)/(2n+2)
 n>0
 */
 
-#include <stdio.h>
 
-int main(){
-	float n;
-	printf("gia tri cua n la:");
-	scanf("%f", &n);
-	
-	float i;
-	for(i=0;i<=n;i+=0,5){
-		i+=i; 
-	} 
-	printf("gia tri cua tong s la : %f", i);
-	return 0;  
-} 
+
