@@ -499,6 +499,7 @@ cho so nguyen n
 tinh tri tuyet doi cua n 
 */
 
+/*
 #include <stdio.h>
 #include <math.h>
 
@@ -512,10 +513,151 @@ int main(){
 	printf("%d", x);
 	return 0; 
 } 
+*/
+
+/*
+bai 17
+cho n nguyen duong gom k chu so . tim so co gia tri lon nhat 
+*/
+
+/*
+#include <stdio.h>
+
+int main(){
+	int n;
+	printf("gia tri cua n la :");
+	scanf("%d", &n);
+	
+	int a=0;
+	
+	while(n>0){
+		int du=n%10;
+		if(du>a) {
+			a=du; 
+		}
+		n=n/10; 
+	} 
+     
+	printf("chu so lon nhat trong so %d la %d", n, a);
+	return 0; 
+	
+} 
+*/
+
+/*
+bai 18:
+dem so luong uoc so chan cua so nguyen duong n
+*/
+ 
+/*
+#include <stdio.h>
+
+int main(){
+	int n;
+	printf("gia tri cua n :");
+	scanf("%d", &n);
+	
+	int i; 
+	for(i=1;i<=n;i++){
+		if((n%i)==0){
+			if((n/i)%2==0){
+				printf("uoc so chan cua n la :%d\n", n/i); 
+			} 
+		} 
+	} 
+	return 0; 
+} 
+*/
+
+/*
+bai 19 
+in ra chu so dau tien cua so nguyen duong n gom k chu so 
+*/
+
+/*
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Gia tri cua n là: ");
+    scanf("%d", &n);
+    
+    if(n>0){
+    char s[100];
+    sprintf(s, "%d", n);
+    printf("chu so dau tien : %c ", s[0]);
+}
+    return 0;
+}
+*/
+
+/*
+Bai 20
+cho 2 so nguyen duong a,b . tim UCLN cua a va b
+*/
+
+/*
+#include <stdio.h>
+
+int main(){
+	int a,b ;
+	printf ("gia tri cua a vs b la :");
+	scanf("%d%d", &a, &b);
+	
+	while((a<=0)||(b<=0)){
+		printf("a va b phai la so nguyen duong, vui long nhap lai");
+		printf ("gia tri cua a vs b la :");
+     	scanf("%d%d", &a, &b); 
+	} 
+	
+	while(a!=b){
+		if(a>b){
+			a-=b; 
+		} else{
+			b-=a; 
+		} 
+	} 
+	printf("ucln cua a va b la %d", a);
+	return 0; 
+} 
+*/
+
+/*
+Bai 21 
+cho 2 so nguyen duong a,b . tim BCNN cua a va b
+*/
+
+#include <stdio.h> 
+
+int main(){
+	int a,b;
+	printf("nhap vao gia tri cua a va b : ");
+	scanf("%d%d", &a, &b);
+	 
+	while((a<=0)||(b<=0)){
+		printf("a va b la nguyen duong. nhap lai : ");
+		scanf("%d%d", &a, &b); 
+	} 
+	
+	if ((a>0) && (b>0)){
+	int i; 
+	for(i=1;;i++){
+		if((a*i)%b==0){
+			printf("bcnn là %d ", a*i); 
+			break; 
+		} 
+	} 
+}
+	return 0; 
+} 
+
 
 
 /*
 pow(a, b)==a^b 
+abs(n)=|n| voi n nguyen
+fabs(n)=|n| voi n co dau cham dong 
+strlen(a) tinh do dai chuoi ky tu a  
 int la kieu du lieu 
 unsigned int la kieu du lieu cho so nguyen khong am  
 %d dinh dang chuoi cua int
