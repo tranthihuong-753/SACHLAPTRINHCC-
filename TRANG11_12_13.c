@@ -627,6 +627,7 @@ Bai 21
 cho 2 so nguyen duong a,b . tim BCNN cua a va b
 */
 
+/*
 #include <stdio.h> 
 
 int main(){
@@ -651,15 +652,239 @@ int main(){
 	return 0; 
 } 
 
+*/
+
+/*
+bai 22 
+cho so nguyen duong x . kiem tra xem x co phai so nguyen to khong 
+*/
+/*
+#include <stdio.h> 
+
+int main(){
+	int n;
+	printf("gia tri cua n la: ");
+	scanf("%d", &n);
+	
+	if(n>=2){
+		int i; 
+		for(i=2; i<n;i++){
+			if((n%i)==0){
+				if(n==2){
+					printf("%d la so nguyen to", n); 
+					break; 
+				}else{
+					printf("%d khong la so nguyen to", n);
+				}
+				break; 
+			}
+			if(i==(n-1)){
+				printf("%d la so nguyen to", n);
+			} 
+		} 
+	}else{
+		printf("%d khong la so nguyen to", n);
+	} 
+	return 0;  
+} 
+*/
+
+/* 
+bai 23 
+cho so nguyen duong x. kiem tra xem x co phai so chinh phuong khong . 
+*/
+/*
+#include <stdio.h>
+#include <math.h> 
+int main(){
+	unsigned int x;
+	printf("nhap gia tri cua x: ");
+	scanf("%u", &x);
+	
+	float a=sqrt(x);
+
+	if(a==(unsigned int)a){
+		printf("%u la so chinh phuong ", x);
+	} else{
+		printf("%u khong la so chinh phuong ", x);
+	} 
+	return 0; 
+} 
+*/
+
+/*
+bai 24
+cho so nguyen duong x. kiem tra xem x co phai so hoan thien (tong cac uoc khong tinh no bang chinh no ) khong
+*/
+ 
+ /*
+#include <stdio.h>
+
+int main(){
+	int x;
+	printf("gia tri cua x la : ");
+	scanf("%d", &x);
+	int s=0;
+	 
+	if(x>0){
+		int i; 
+		for(i=2;i<=x;i++){
+			if((x%i)==0){
+				s=s+(x/i); 
+			}
+		} 
+		if(s==x){
+			printf("%d la so hoan thien ", x); 
+		} else{
+			printf("%d khong la so hoan thien ", x);
+		} 
+	} 
+	return 0; 
+} 
+*/
+
+/*
+bai 1
+tinh s=1+2^2+...+n^n
+voi n>0 
+*/
+/*
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	long long int n;
+	printf("gia tri cua n la : ");
+	scanf("%lld", &n);
+	
+	int k=0;
+	int i;
+	for(i=1;i<=n;i++){
+		k=k+pow(i,i); 
+	} 
+	printf("gia tri cua s la : %lld", k);
+	return 0; 
+} 
+*/
+
+/*
+bai 2 
+tinh s=1/2+2/3+...+n/(n+1) voi n>0
+*/
+
+/*
+#include <stdio.h>
+
+int main(){
+	unsigned int n;
+	printf("gia tri cua n la : ");
+	scanf("%d",&n);
+	
+	float k=0.0;
+	int i;
+	for(i=1;i<=n;i++){
+		k+=(float)i/(i+1); 
+	}
+	printf("gia tri cua s la : %f", k);
+	return 0; 
+} 
+*/
+
+/*
+bai 3
+tinh s=1+1/2!+1/3!+...+1/n!
+*/
+/*
+#include <stdio.h>
+
+int main(){
+	int n;
+	printf("nhap vao gia tri cua n: ");
+	scanf("%d", &n);
+	
+	int i;
+	int k0=1;
+	float k1=0.0; 
+	
+	for(i=1;i<=n;i++){
+		k0*=i;
+		k1+=(float)1/k0; //k1+=(float)(1/k0) || k1+=1/k0 khong ra ma oi  
+	} 
+	printf("gia tri cua s la : %f", k1);
+	return 0; 
+} 
+*/
+
+/*
+bai 4 
+tinh s=1+(1+2)/2!+(1+2+3)/3!+...+(1+..+n)/n!
+voi n>0
+*/
+
+/*
+#include <stdio.h>
+
+int main(){
+	int n; 
+	printf("nhap vao gia tri cua n: ");
+	scanf("%d", &n);
+	
+	int i;
+	int k0=0, k1=1;
+	float k2=0; 
+	
+	for(i=1;i<=n;i++){
+		k0+=i;
+		k1*=i;
+		k2+=(float)k0/k1; 
+	}  
+	printf("gia tri cua s la : %f", k2);
+	return 0; 
+} 
+*/
+
+/*
+bai 5
+gia va bien luan pt bac 2 ax^2+bx+c=0
+*/ 
+
+/*
+bai 6
+giai va bien luan pt bac 4 trung phuong  ax^4+bx^2+c=0
+*/
+
+/*
+bai 7 
+*/
+
+#include <stdio.h>
+#include <math.h> 
+int main(){
+	int n; 
+	printf("nhap vao gia tri cua n: ");
+	scanf("%d", &n);
+	
+	float k1=1;
+	int i; 
+	
+	for(i=2;i<=n;i++){
+		k1=(float)pow(i+k1,0.5); 
+	} 
+	printf("gia tri cua s la : %f", k1);
+	return 0; 
+} 
+
 
 
 /*
-pow(a, b)==a^b 
+pow(a, b)==a^b // yêu cau các tham so cua nó phai là kieu du lieu double hoac float 
 abs(n)=|n| voi n nguyen
 fabs(n)=|n| voi n co dau cham dong 
 strlen(a) tinh do dai chuoi ky tu a  
+
 int la kieu du lieu 
 unsigned int la kieu du lieu cho so nguyen khong am  
+
 %d dinh dang chuoi cua int
 %u la dinh dang chuoi cua  unsigned int
 */ 
