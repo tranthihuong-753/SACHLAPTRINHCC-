@@ -857,6 +857,7 @@ giai va bien luan pt bac 4 trung phuong  ax^4+bx^2+c=0
 bai 7 
 */
 
+/*
 #include <stdio.h>
 #include <math.h> 
 int main(){
@@ -868,11 +869,33 @@ int main(){
 	int i; 
 	
 	for(i=2;i<=n;i++){
-		k1=(float)pow(i+k1,0.5); 
+		k1=(float)pow(i+k1,0.5); //k1=(float)pow(i+k1,1/5); khong duoc ma oi 
 	} 
 	printf("gia tri cua s la : %f", k1);
 	return 0; 
 } 
+*/
+
+/*
+bai 8
+*/
+/* 
+#include <stdio.h>
+#include <math.h> 
+int main(){
+	int n; 
+	printf("nhap vao gia tri cua n: ");
+	scanf("%d", &n);
+	
+	float k1=(float)pow(n, 0.5);
+	int i; 
+	
+	for(i=n;i>=1;i--){
+		k1=(float)pow(i-1+k1,0.5); //k1=(float)pow(i+k1,1/5); khong duoc ma oi 
+	} 
+	printf("gia tri cua s la : %f", k1);
+	return 0; 
+*/
 
 
 
@@ -888,16 +911,4 @@ unsigned int la kieu du lieu cho so nguyen khong am
 %d dinh dang chuoi cua int
 %u la dinh dang chuoi cua  unsigned int
 */ 
-/*
-Ham tinh phan so 
-#include <stdio.h>
 
-float addFractions(int num1, int denom1) {
-    return (float)num1/denom1 ;
-}
-
-int main(){
-	float x=addFractions(3,2); 
-	printf("%f", x); 
-} 
-*/ 
