@@ -898,9 +898,67 @@ int main(){
 */
 
 
+/*
+bai 9
+*/
 
 /*
-pow(a, b)==a^b // yêu cau các tham so cua nó phai là kieu du lieu double hoac float 
+#include <stdio.h>
+void luong(int a, int b){
+	if(b<12){
+		printf("luong nhan duoc la : %d", (b-a)*6000); 
+	} else {
+		if(a<12){
+		    printf("luong nhan duoc la : %d", (12-a)*6000+(b-12)*7500); 
+		}else{
+			printf("luong nhan duoc la : %d", (b-a)*7500);
+		} 
+	} 
+} 
+
+int main(){
+	int a,b;
+	printf("gia vao ca va tan ca la: ");
+	scanf("%d %d", &a,&b);
+	if((a>=6)&&(b<=18)&&(a<b)){
+	luong(a,b);
+	}else{
+		printf("gio vao som nhat la 6 gio, gio ra tre nhat la 18 gio . Ban da nhap sai gio vao/ra, vui long nhap lai ") ;
+	} 
+	return 0; 	
+	}     
+	
+*/
+ 
+/*
+bai 10
+*/
+
+/*
+#include <stdio.h>
+#include <math.h>
+
+float soThuNhat(int a, int b){
+	return pow((a*a*a/27)+(b*b/4),0.5); 
+} 
+
+float soThuHai(int a){
+	return (float)-a/2 ; 
+} 
+
+int main(){
+	int q,p;
+	printf("nhap vao gia tri cua q va p : ");
+	scanf("%d %d", &q,&p);
+	
+	printf("gia tri cua bieu thuc la : %f", (float)(pow(soThuHai(q)+soThuNhat(p,q),1.0/3.0)+pow(soThuHai(q)-soThuNhat(p,q),1.0/3.0)));
+	return 0; 
+}  
+*/ 
+
+
+/*
+pow(a,b)==a^b // yeu cau các tham so cua nó phai là kieu du lieu double hoac float 
 abs(n)=|n| voi n nguyen
 fabs(n)=|n| voi n co dau cham dong 
 strlen(a) tinh do dai chuoi ky tu a  
